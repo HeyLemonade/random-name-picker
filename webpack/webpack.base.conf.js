@@ -1,5 +1,5 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlVariablesPlugin = require('html-variables-plugin');
@@ -32,15 +32,15 @@ module.exports = {
         {
           from: path.resolve(__dirname, '../src/assets/images/og'),
           to: 'assets/images/og',
-          globOptions: { ignore: ['**/.DS_Store'] }
+          globOptions: {ignore: ['**/.DS_Store']}
         },
         {
           from: path.resolve(__dirname, '../src/assets/images/touch-icons'),
           to: 'assets/images/touch-icons',
-          globOptions: { ignore: ['**/.DS_Store'] }
+          globOptions: {ignore: ['**/.DS_Store']}
         },
-        { from: path.resolve(__dirname, '../src/assets/images/favicon.ico'), to: 'assets/images/favicon.ico' },
-        { from: path.resolve(__dirname, '../src/manifest.json'), to: 'manifest.json' }
+        {from: path.resolve(__dirname, '../src/assets/images/logo-icon.png'), to: 'assets/images/logo-icon.png'},
+        {from: path.resolve(__dirname, '../src/manifest.json'), to: 'manifest.json'}
       ]
     }),
     new HtmlWebpackPlugin({

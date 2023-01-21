@@ -15,7 +15,6 @@ import SoundEffects from '@js/SoundEffects';
   const confettiCanvas = document.getElementById('confetti-canvas') as HTMLCanvasElement | null;
   const nameListTextArea = document.getElementById('name-list') as HTMLTextAreaElement | null;
   const removeNameFromListCheckbox = document.getElementById('remove-from-list') as HTMLInputElement | null;
-  const enableSoundCheckbox = document.getElementById('enable-sound') as HTMLInputElement | null;
 
   // Graceful exit if necessary elements are not found
   if (!(
@@ -30,7 +29,6 @@ import SoundEffects from '@js/SoundEffects';
     && confettiCanvas
     && nameListTextArea
     && removeNameFromListCheckbox
-    && enableSoundCheckbox
   )) {
     console.error('One or more Element ID is invalid. This is possibly a bug.');
     return;
@@ -107,7 +105,6 @@ import SoundEffects from '@js/SoundEffects';
   const onSettingsOpen = () => {
     nameListTextArea.value = slot.names.length ? slot.names.join('\n') : '';
     removeNameFromListCheckbox.checked = slot.shouldRemoveWinnerFromNameList;
-    enableSoundCheckbox.checked = !soundEffects.mute;
     settingsWrapper.style.display = 'block';
   };
 
@@ -155,7 +152,7 @@ import SoundEffects from '@js/SoundEffects';
       ? nameListTextArea.value.split(/\n/).filter((name) => Boolean(name.trim()))
       : [];
     slot.shouldRemoveWinnerFromNameList = removeNameFromListCheckbox.checked;
-    soundEffects.mute = !enableSoundCheckbox.checked;
+    soundEffects.mute = true;
     onSettingsClose();
   });
 

@@ -188,6 +188,11 @@
   color: $color-text-light;
 }
 
+.theme--yellow .settings__panel {
+  background-color: $color-settings-background-yellow;
+  color: $color-text-dark;
+}
+
 // Winning effects
 .sunburst {
   position: absolute;

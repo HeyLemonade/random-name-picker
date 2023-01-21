@@ -10,7 +10,7 @@ include ../mixins/icons
   canvas#confetti-canvas.confetti
 
   #lucky-draw
-    img.title(src="~@images/title.svg" alt="Lucky Draw")
+    img.title(src="~@images/hl-logo.svg" alt="Lucky Draw")
 
     .slot
       .slot__outer
@@ -37,11 +37,6 @@ include ../mixins/icons
             input(type="checkbox" checked="true" id="remove-from-list")
             span.slider
 
-        div.input-group.input-group--2-column
-          label.input-label(for="enable-sound") Enable sound effect
-          label.input--switch
-            input(type="checkbox" checked="true" id="enable-sound")
-            span.slider
       div.settings__panel__group
         button#settings-save.solid-button.solid-button Save
         button#settings-close.solid-button.solid-button--danger Discard and close
