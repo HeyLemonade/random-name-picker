@@ -32,9 +32,9 @@ $slot-width: 62.5rem;
 $slot-height: 14.375rem;
 $slot-border-radius: 1.25rem;
 $slot-border-width: 1.625rem;
-$slot-inner-padding: (
+$slot-inner-padding: calc((
     $slot-height - ($slot-border-width * 2) - $reel-item-height
-  ) / 2;
+  ) / 2);
 
 // draw-button
 $draw-button-margin-top: 5.5rem;
@@ -47,4 +47,4 @@ $setting-panel-max-width: 33.125rem; // 530px;
 $switch-handle-diameter: 24px;
 $switch-slider-width: 75px;
 $switch-slider-height: 30px;
-$switch-slider-padding: ($switch-slider-height - $switch-handle-diameter) / 2;
+$switch-slider-padding: calc(($switch-slider-height - $switch-handle-diameter) / 2);

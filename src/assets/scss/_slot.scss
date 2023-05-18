@@ -13,12 +13,12 @@
   position: relative;
   z-index: $z-index-title; // make sure title on top of sunburst
 
-  @each $media-query, $factor in $scale-factors {
-    @media #{$media-query} {
-      max-width: $title-width * $factor;
-      margin: $title-margin-top 0 $title-margin-bottom * $factor 0;
-    }
-  }
+  // @each $media-query, $factor in $scale-factors {
+  //   @media #{$media-query} {
+  //     max-width: $title-width * $factor;
+  //     margin: $title-margin-top 0 $title-margin-bottom * $factor 0;
+  //   }
+  // }
 }
 
 .control-group {
@@ -71,18 +71,18 @@
     border-bottom-left-radius: $slot-border-radius;
   }
 
-  @each $media-query, $factor in $scale-factors {
-    @media #{$media-query} {
-      width: $slot-width * $factor;
-      height: $slot-height * $factor;
-      margin: 0 auto;
+  // @each $media-query, $factor in $scale-factors {
+  //   @media #{$media-query} {
+  //     width: $slot-width * $factor;
+  //     height: $slot-height * $factor;
+  //     margin: 0 auto;
 
-      &__outer {
-        transform: scale($factor);
-        transform-origin: top left;
-      }
-    }
-  }
+  //     &__outer {
+  //       transform: scale($factor);
+  //       transform-origin: top left;
+  //     }
+  //   }
+  // }
 }
 
 .reel {
@@ -110,17 +110,17 @@
   position: relative;
   z-index: $z-index-draw-button; // make sure draw button on top of sunburst
 
-  @each $media-query, $factor in $scale-factors {
-    @media #{$media-query} {
-      width: $draw-button-width * $factor;
-      margin: $draw-button-margin-top * $factor 0 0;
-      font-size: max((1.75rem * $factor), 1rem);
-      line-height: max((1.75rem * $factor), 1rem);
-      padding: 1rem * $factor 0.625rem * $factor;
-      border-radius: 0.625rem * $factor;
-      @include shadow('large', $factor);
-    }
-  }
+  // @each $media-query, $factor in $scale-factors {
+  //   @media #{$media-query} {
+  //     width: $draw-button-width * $factor;
+  //     margin: $draw-button-margin-top * $factor 0 0;
+  //     font-size: max((1.75rem * $factor), 1rem);
+  //     line-height: max((1.75rem * $factor), 1rem);
+  //     padding: 1rem * $factor 0.625rem * $factor;
+  //     border-radius: 0.625rem * $factor;
+  //     @include shadow('large', $factor);
+  //   }
+  // }
 }
 
 .settings {
